@@ -6,11 +6,18 @@
 //   plugins: [react()],
 // })
 
-export default {
-  // other configurations
+// export default {
+//   // other configurations
+//   build: {
+//     rollupOptions: {
+//       external: ["react-dom/client"],
+//     },
+//   },
+// };
+export default defineConfig({
   build: {
     rollupOptions: {
-      external: ["react-dom/client"],
+      external: ["netlify-identity-widget"],
     },
   },
-};
+});
