@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update
+
+media_folder: "public/uploads" # Media files will be stored here
+public_folder: "/uploads" # Accessible location for media files
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "src/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "articles"
+    label: "Articles"
+    folder: "src/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pillars"
+    label: "Pillars"
+    folder: "src/pillars"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Content", name: "content", widget: "markdown" }
+      - { label: "Order", name: "order", widget: "number" }
